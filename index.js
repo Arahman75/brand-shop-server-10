@@ -8,8 +8,8 @@ const port = process.env.PORT || 5000;
 const corsConfig = {
     origin: [
         'http://localhost:5173',
-        'https://automotive-brand-321a1.web.app',
-        'https://automotive-brand-321a1.firebaseapp.com',
+        'https://auto-mobile-brand.web.app',
+        'https://auto-mobile-brand.firebaseapp.com',
     ],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE']
