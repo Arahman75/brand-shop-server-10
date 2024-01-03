@@ -5,10 +5,24 @@ require('dotenv').config();
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const port = process.env.PORT || 5000;
 
+const corsConfig = {
+    origin: [
+        'http://localhost:5173',
+        'https://automotive-brand-321a1.web.app',
+        'https://automotive-brand-321a1.firebaseapp.com',
+    ],
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE']
+}
+app.use(cors(corsConfig))
+app.options("", cors(corsConfig));
+app.use(express.json());
+
+
 
 // middleware
-app.use(cors());
-app.use(express.json())
+// app.use(cors());
+// app.use(express.json())
 
 // automotiveBrand
 // AwmJGwlmoMDD3nRp
